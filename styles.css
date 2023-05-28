@@ -60,6 +60,7 @@ body {
     border-radius: 4px;
     margin-left: 10px;
     cursor: pointer;
+    background-color: gray;
   }
   
   /* Estilos para el menú de hamburguesa */
