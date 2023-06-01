@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador de Visitas</title>
+  <style>
+    /* Estilos CSS para el pie de página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // Función para incrementar el contador de visitas
+    function incrementarContador() {
+      var visitas = localStorage.getItem("visitas");
+      if (visitas) {
+        visitas = parseInt(visitas) + 1;
+      } else {
+        visitas = 1;
+      }
+      localStorage.setItem("visitas", visitas);
+      document.getElementById("contadorVisitas").textContent = "Visitas: " + visitas;
+    }
+  </script>
+</head>
+<body onload="incrementarContador()">
+  
+  <!-- El contenido de tu página web -->
+  
+  <footer>
+    <p id="contadorVisitas"></p>
+  </footer>
+</body>
+</html>
